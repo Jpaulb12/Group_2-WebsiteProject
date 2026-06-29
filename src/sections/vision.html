@@ -4,8 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
+    <link rel="stylesheet" href="../../output.css">
+    <style>
+     body {
+            margin: 0;
+            padding: 0;
+            height: 300vh; /* Gives plenty of room to scroll down */
+            background-color: #f3f4f6;
+        }
+
+        /* Lock the viewport frame in place */
+        .animation-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+
+        /* Abstract Shape Base Definitions */
+        .shape {
+            position: absolute;
+            transition: transform 0.1s ease-out;
+            will-change: transform;
+        }
+</style>
+        </head>
 <body>
-    
+         <div class="relative w-full h-screen overflow-hidden">
+
+    <div   class="absolute z-999  h-screen flex justify-center items-center font-semi-bold text-white">
+
+        <h1 id="text-layer" class="text-center text-2xl w-[30%] leading-10">
+            We help you set focus and gain impact. By adding to the conversation, not to the noise.
+        </h1>
+
+    </div>
+
+   <div class="absolute top-[12%] left-[17%] bg-pink-300 w-[25%] h-[60%] [clip-path:polygon(65%_0,75%_0,100%_53%,83%_100%,25%_100%,1%_51%)]">
+   </div>
+
+
+   <div id="shape-yellow" class="bg-yellow-300 w-[25%] h-[100%] ml-[5%] [clip-path:polygon(45%_0,90%_15%,70%_80%,40%_100%,10%_75%,0%_15%)] rotate-38">
+   </div>
+
+
+   <div id="shape-teal" class="absolute top-[22%] left-[15%] bg-green-800 w-[25%] h-[48%] [clip-path:polygon(7%_3%,55%_9%,100%_50%,93%_94%,40%_100%,0_52%)] rotate-10 z-9">
+   </div>
+
+
+   <div id="shape-red" class="absolute top-[35%] left-[10%] bg-red-600 w-[42%] h-[62%] [clip-path:polygon(8%_30%,73%_12%,100%_50%,85%_83%,20%_78%,0_52%)] rotate-5 z-8">
+   </div>
+
+
+   <div id="shape-blue" class="absolute top-[5%] left-[32%] bg-blue-600 w-[45%] h-[70%] [clip-path:polygon(40%_3%,70%_0,90%_40%,70%_100%,44%_100%,5%_63%,30%_10%)] rotate-5 z-10">
+   </div>
+
+
+   <div class="absolute bottom-0 -right-26 bg-green-800 w-[50%] h-[75%] [clip-path:polygon(20%_5%,44%_0%,92%_100%,35%_100%,5%_76%,8%_26%)] -rotate-10 ">
+   </div>
+</div>
+
+
+    <script>
+        const yellow = document.getElementById('shape-yellow');
+        const teal = document.getElementById('shape-teal');
+        const text = document.getElementById('text-layer');
+        const red=document.getElementById('shape-red');
+        const blue=document.getElementById('shape-blue');
+
+        window.addEventListener('scroll', () => {
+            // 1. Calculate scroll percentage (0 to 1)
+            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = window.scrollY / maxScroll;
+
+            // 2. Limit the effect so it stops moving halfway through the scroll (like the video)
+            const progress = Math.min(scrollPercent * 2, 1); // Reaches 100% structural stop halfway down
+
+            // 3. Apply the movement mapping
+            // Yellow moves down 250px and right 50px
+            yellow.style.transform = `translate(${progress * 50}px, ${progress * 250}px)`;
+            
+            // Teal moves down 300px and left 80px
+            teal.style.transform = `translate(${progress * -80}px, ${progress * 412}px)`;
+            red.style.transform=`translate(${progress * -30}px, ${progress * 250}px)`;
+            blue.style.transform=`translate(${progress * -70}px, ${progress *250}px)`;
+
+            // Text fades in and moves slightly up into its final spot
+           // text.style.transform = `translateY(${(1 - progress) * 50}px)`;
+          text.style.transform = `translateY(${(  progress + 1 ) * 50}px)`;
+
+            //text.style.opacity = progress;
+        });
+    </script>
 </body>
 </html>
