@@ -5,50 +5,187 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../output.css">
+     <script src="https://cdn.tailwindcss.com"></script>
     <style>
      body {
             margin: 0;
             padding: 0;
-            height: 300vh; /* Gives plenty of room to scroll down */
-            background-color: #f3f4f6;
+            height: 300vh; 
+            background-color:white;
+            
         }
 
-        /* Lock the viewport frame in place */
+        
         .animation-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
+            position: relative;
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%,-55%);
+            width:100%;
+            max-width:1400px; /* To Lock the screen from Zoom Out */
+            height:100vh;
+            max-height:900px; /* Keep dimensions stable */
             background-color: #ffffff;
+            overflow: hidden;
+        
         }
 
-        /* Abstract Shape Base Definitions */
+        
         .shape {
             position: absolute;
             transition: transform 0.1s ease-out;
             will-change: transform;
         }
+        #text-layer{
+
+         margin-top: 20%;
+
+        }
+        #shape-yellow{
+        min-width: 2cm;
+        min-height: 5cm;
+            
+        }
+
+        /* --- Responsiveness for Mobile / iPhone 14 to match small-size.PNG --- */
+        @media (max-width: 768px) {
+            /* Restyle header elements so they fit mobile displays cleanly */
+            header {
+                height: auto !important;
+                padding: 1rem !important;
+            }
+            header h1 {
+                font-size: 1.5rem !important;
+            }
+            header nav {
+                font-size: 0.875rem !important;
+                line-height: 1.25rem !important;
+            }
+
+            /* Position the text layer squarely in the center of the viewport over the shapes */
+            #text-layer {
+                margin-top: 0 !important;
+                font-size: 150% !important;
+                line-height: 2rem !important;
+                max-width: 70% !important;
+                padding: 0 1rem;
+                align-items: center;
+            }
+
+            /* Adjust container behavior on mobile devices */
+            .animation-container {
+                top: 60% !important;
+                height: 100vh !important;
+            }
+
+            /* Overriding absolute position constraints to match the tight cluster in small-size.PNG */
+            .animation-container > div {
+                transform: scale(0.9); /* Keeps shapes bounded within small viewports */
+            }
+
+            /* Pink Vector */
+            .animation-container div[style*="right:40%"] {
+                right: 20% !important;
+                top: 10% !important;
+                width: 40%;
+                height:70% ;
+            }
+
+            /* Yellow Shape */
+            #shape-yellow {
+                position: absolute !important;
+                top: 10% !important;
+                left: 0px !important;
+                height: 70%;
+                width:70% ;
+            }
+
+            /* Teal Shape (corresponds to the upper-left green cluster block) */
+            #shape-teal {
+                left: 20% !important;
+                top: 20% !important;
+                width:55%;
+                left:10%;
+            }
+
+            /* Blue Shape */
+            #shape-blue {
+                left: 42% !important;
+                top: 24% !important;
+                width: 55% !important;
+            }
+
+            /* Red Shape */
+            #shape-red {
+                left: 15% !important;
+                top: 38% !important;
+            }
+           #secgreen{
+        
+           height:0.9%;
+           width:40%;
+           left:80%;
+           }
+            /* Secondary Green Shape */
+            .animation-container div[style*="top:30%"] {
+                top: 25% !important;
+                left: 0% !important;
+                height: 25%;
+            }
+        }
 </style>
         </head>
-<body>
-         <div class="relative w-full h-screen overflow-hidden">
+<body  id="wrapper-bg-view">
 
-    <div   class="absolute z-999  h-screen flex justify-center items-center font-semi-bold text-white">
 
-        <h1 id="text-layer" class="text-center text-3xl w-[30%] leading-10">
-         <b>  We help you set focus and gain impact. By adding to the conversation, not to the noise.</b> 
+
+<!-- The navigation bar -->
+    <header class=" fixed top-0 left-0 w-full h-32 z-50 flex items-center justify-between py-2 pr-5 pl-5  ">
+        <div class="self-start  mt-4 text-2x">
+            <p>DE</p>
+            <p>EN</p>
+        </div>
+        <div class="">
+            <h1 class="text-3xl font-bold ">
+                Baumeister
+            </h1>
+        </div>
+        <nav class=" flex justify-end  flex-col  text-xl  text-right">
+            <a href="#about-us">About</a>
+            <a href="#services">Services</a>
+            <a href="#references">References</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+         <div class="relative w-full h-screen ">
+
+    <div   class="absolute z-999  h-screen inset-0 flex justify-center items-center font-semi-bold text-white pointer-events-none">
+
+        <h1 id="text-layer" class="text-center text-4xl max-w-auto md:w-[30%]   leading-10 pointer-events-auto">
+           We help you set focus and gain impact. By adding to the conversation, not to the noise. 
         </h1>
 
     </div>
-
-   <div class="absolute top-[10%] z-1  " style="right:40%;">
+<div class="animation-container">
+   <div class="absolute top-[10%] z-1 right-[5%] lg:right-[10%] " style="right:40%;">
     <img src="images/Vector.png" alt="pink-images">
    </div>
 
 
-   <div id="shape-yellow" class=" z-8    " >
+   <div id="shape-yellow" class=" z-8   " >
     <img src="images/yellow.png" alt="yellow">
    </div>
 
@@ -68,11 +205,11 @@
    </div>
 
 
-   <div class="absolute bottom-0 -right-26     " style="top:50%; right: 5%;">
+   <div id="secgreen" class="absolute bottom-0 -right-26      " style="top:50%; right: 0%;">
 <img src="images/secgreen.png">   
 </div>
 </div>
-
+</div>
 
     <script>
         const yellow = document.getElementById('shape-yellow');
@@ -105,5 +242,6 @@
             //text.style.opacity = progress;
         });
     </script>
+    
 </body>
 </html>
