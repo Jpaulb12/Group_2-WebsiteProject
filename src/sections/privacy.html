@@ -6,32 +6,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Document</title>
 </head>
-<body>
-    <div class="text-[#00672e]">
-    <!-- The navigation bar -->
-    <header class=" fixed top-0 left-0 w-full h-32 z-50 flex items-center justify-between py-2 ">
-        <div class="self-start  mt-4 text-2x">
-            <p>DE</p>
-            <p>EN</p>
-        </div>
-        <div class="">
-            <h1 class="text-3xl font-bold ">
-                Baumeister
-            </h1>
-        </div>
-        <nav class=" flex justify-end  flex-col  text-xl  text-right">
-            <a href="#about-us">About</a>
-            <a href="#services">Services</a>
-            <a href="#refernces">References</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        
-    </header>
-    <div id="about" class="m-auto mt-60 text-2xl flex flex-col gap-10 max-w-[85%] text-[#00672e] font-normal">
+<body class="bg-[#f3f1ef]  text-[#00672e]" >
+     <section id="privacy" class="m-auto mt-60 text-[15px] font-semibold lg:text-[24px] w-[90%] lg:w-[80%] ">
+     <div class=" flex flex-col gap-10 font-normal">
             <h3 class="text-4xl font-semibold">DATA PRIVACY</h3>
             <p class="text-4xl">PRIVACY POLICY</p>
 
-            <div class="text-[24px]">
+            <div>
                 <p>We are very delighted that you have shown interest in our enterprise. Data protection is of a particularly high priority for the management of the Agentur Baumeister. The use of the Internet pages of the Agentur Baumeister is possible without any indication of personal data; however, if a data subject wants to use special enterprise services via our website, processing of personal data could become necessary. If the processing of personal data is necessary and there is no statutory basis for such processing, we generally obtain consent from the data subject.                    
                 </p>
                 <p>
@@ -439,5 +420,85 @@
             </div>
         </div>
     </div>
+ </section>
+ 
+ <!-- footer section -->
+  <footer class="w-[90%] lg:w-[80%] mx-auto mt-40 lg:mt-0 pb-20 font-semibold">    
+
+    <!-- iPhone 14 & 15 Pro -->
+   <div class="flex flex-col gap-10 lg:hidden md:hidden text-[15px]">
+        
+        <div>
+            <p>Agentur Baumeister</p>
+            <p>Böckhstraße 13</p>
+            <p>10967 Berlin</p>
+        </div>
+       
+        <div>
+            <p class="underline"><a href="https://mail.google.com/mail/u/0/#inbox?compose=new">hallo@agentur-baumeister.com</a></p>
+            <p>+49 (0)30 - 490 827 87</p>
+        </div>
+        
+        <div class="flex justify-between flex-wrap gap-y-4 mt-10">
+            <p><a href="privacy.html">Datenschutz</a></p>
+            <p><a href="imprint.html">Impressum</a></p> 
+            <p><a href="">LinkedIn</a></p>
+            <p><a href="https://www.motelminibar.com/">Instagram</a></p>           
+            
+        </div>
+
+    </div>
+
+    <!-- iPad Pro 11" -->
+    <div class="hidden lg:hidden md:grid md:grid-cols-2 gap-10 text-[15px]">
+
+        <div>
+            <p>Agentur Baumeister</p>
+            <p>Böckhstraße 13</p>
+            <p>10967 Berlin</p>
+        </div>
+
+        <div class="text-right">
+            <p class="underline"><a href="https://mail.google.com/mail/u/0/#inbox?compose=new">hallo@agentur-baumeister.com</a></p>
+            <p>+49 (0)30 - 490 827 87</p>
+        </div>
+
+        <div class="col-span-2 flex justify-between mt-4">            
+            <p><a href="">LinkedIn</a></p>
+            <p><a href="https://www.motelminibar.com/">Instagram</a></p>
+            <p><a href="imprint.html">Impressum</a></p>
+            <p><a href="privacy.html">Datenschutz</a></p>
+        </div>
+
+    </div>
+
+    <!-- MacBook Pro 14" -->
+
+   <div class="hidden lg:flex justify-between mt-10">
+    <img src="vector/sfa.png" alt="red shap" class="mx-auto my-30">
+   </div> 
+    <div class="hidden lg:flex lg:justify-between text-[30px]">
+
+        <div>
+            <p>Agentur Baumeister</p>
+            <p>Böckhstraße 13</p>
+            <p>10967 Berlin</p>
+        </div>
+
+        <div>
+            <p class="underline"><a href="https://mail.google.com/mail/u/0/#inbox?compose=new">hallo@agentur-baumeister.com</a></p>
+            <p>+49 (0)30 - 490 827 87</p>
+        </div>
+
+        <p><a href="">LinkedIn</a></p>
+        <p><a href="https://www.motelminibar.com/">Instagram</a></p>
+        <div class="text-end">
+            <p><a href="imprint.html">Impressum</a></p>
+            <p><a href="privacy.html">Datenschutz</a></p>
+        </div>        
+
+    </div>
+
+</footer> 
 </body>
 </html>
