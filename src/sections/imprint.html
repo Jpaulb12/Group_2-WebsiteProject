@@ -6,42 +6,46 @@
     <link rel="stylesheet" href="../../output.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <title>Data Privacy</title>
 </head>
-<body class="bg-[#f3f1ef]  text-[#00672e]" >
+<body class="bg-[#f3f1ef]  text-[#00672e]">
 
-<!-- The navigation bar -->
-  <header class=" fixed top-0 left-0 w-full h-32 z-50 flex items-center justify-between py-2 pr-5 pl-5 mx-auto ">
-        <div class="self-start  mt-4 text-2xl">
+    <!--HEADER-->
+
+<div class="absolute top-5 left-5 text-2xl z-50 lg:fixed">
             <p>DE</p>
             <p>EN</p>
         </div>
-          <div class="relative w-60 h-35">
-    <div class="absolute inset-0 lg:hidden bg-[#f3f1ef] [clip-path:polygon(83%_29%,96%_36%,100%_49%,91%_66%,15%_72%,0%_58%,3%_39%)]"></div>
+      <!-- The navigation bar -->
+    <header class=" fixed -top-5
+     left-0 w-full h-32 z-60 flex items-center justify-center py-2  ">
+
+        <div class="relative w-70 h-35 z-8">
+    <div class="absolute inset-0 md:hidden bg-[#f3f1ef]  [clip-path:polygon(83%_29%,96%_36%,100%_49%,91%_66%,15%_72%,0%_58%,3%_39%)]"></div>
 
     <h1 class="relative z-10 flex h-full items-center justify-center text-5xl font-semibold">
         Baumeister
     </h1>
 </div>
-          <nav class=" flex justify-end">
+        <nav class="absolute right-5">
 
- <div class=" lg:hidden w-14 h-15 flex items-center justify-center bg-green-800 [clip-path:polygon(16%_28%,75%_21%,100%_51%,79%_78%,26%_72%,13%_50%)] " onclick="window.location.href='src/sections/vision.html'">
+ <div class=" lg:hidden w-14 z-9 h-15 flex items-center justify-center bg-[#00672e] [clip-path:polygon(16%_28%,75%_21%,100%_51%,79%_78%,26%_72%,13%_50%)] " onclick="window.location.href='src/sections/vision.html'">
                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-white">
   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                      </svg>
              </div>
-<div class="hidden lg:flex flex-col  text-2xl  text-right">
-            <a href="#about-us">About</a>
+<div class="hidden lg:flex flex-col  text-2xl  text-right mt-20">
+            <a href="#about-us" >About</a>
             <a href="#services">Services</a>
             <a href="#references">References</a>
             <a href="#contact">Contact</a>
 </div>
         </nav>
-
     </header>
+        
 <!-- Imprint section -->
 
-<section class="mx-auto w-[90%] lg:w-[80%] mt-50 lg:mt-60 ">
+<section class="mx-auto w-[90%] lg:w-[80%] mt-40 lg:mt-60 ">
 <div id="contact" class="flex flex-col gap-20 justify-around md:flex-row md:gap-0 md:justify-between">
 
 <div class="flex flex-col gap-8 text-[24px] lg:text-[48px]">
@@ -81,11 +85,11 @@
 </section>
 
 <!-- footer section -->
-<footer class="w-[90%] lg:w-[95%] mx-auto pt-30 pb-10 lg:pt-20">
+<footer class="w-[90%] lg:w-[95%] mx-auto mt-20 pb-10 lg:pt-20 text-[15px] font-bold">
 
     <!-- iPhone 14 & 15 Pro -->
     
-   <div class="flex flex-col gap-10 lg:hidden md:hidden text-[20px]">
+   <div class="flex flex-col gap-10 lg:hidden md:hidden ">
         
         <div>
             <p>Agentur Baumeister</p>
@@ -98,17 +102,23 @@
             <p>+49 (0)30 - 490 827 87</p>
         </div>
         
-        <div class="flex justify-between flex-wrap gap-y-4 mt-10">
-            <p>Datenschutz</p>
-            <p>Impressum</p>
-            <p>LinkedIn</p>
-            <p>Instagram</p>
+        <div class="flex justify-between flex-wrap gap-y-4 mt-5">
+           <p><a href="privacy.html">Datenschutz</a></p>
+            <p><a href="imprint.html">Impressum</a></p>            
+            <p> <a href="#">LinkedIn</a></p>
+            <p> <a href="https://www.motelminibar.com/">Instagram</a></p>
         </div>
 
     </div>
 
     <!-- iPad Pro 11" -->
-    <div class="hidden lg:hidden md:grid md:grid-cols-2 gap-10 text-[20px]">
+
+    
+     <div class="hidden lg:hidden md:flex justify-center">
+        <img src="vector/sfa.png" alt="hexagone-vector" class="my-30 size-[70%]">
+     </div>
+
+    <div class="hidden lg:hidden md:grid md:grid-cols-2 gap-10">
 
         <div>
             <p>Agentur Baumeister</p>
@@ -121,11 +131,12 @@
             <p>+49 (0)30 - 490 827 87</p>
         </div>
 
-        <div class="col-span-2 flex justify-between mt-4">
-            <p>LinkedIn</p>
-            <p>Instagram</p>
-            <p>Impressum</p>
-            <p>Datenschutz</p>
+        <div class="col-span-2 flex justify-between mt-4">            
+             <p> <a href="#">LinkedIn</a></p>
+            <p> <a href="https://www.motelminibar.com/">Instagram</a></p>
+            <p><a href="imprint.html">Impressum</a></p>
+            <p><a href="privacy.html">Datenschutz</a></p>
+           
         </div>
 
     </div>
@@ -134,7 +145,7 @@
      <div class="hidden lg:flex justify-center">
         <img src="vector/sfa.png" alt="hexagone-vector" class="my-30">
      </div>
-    <div class="hidden lg:flex lg:justify-between text-[30px]">
+    <div class="hidden lg:flex lg:justify-between text-[20px]">
 
         <div>
             <p>Agentur Baumeister</p>
@@ -147,8 +158,8 @@
             <p>+49 (0)30 - 490 827 87</p>
         </div>
 
-        <p class="w-fit"><a href="">LinkedIn</a></p>
-        <p class="w-fit"><a href="https://www.motelminibar.com/">Instagram</a></p>
+        <p><a href="#">LinkedIn</a></p>
+        <p><a href="https://www.motelminibar.com/">Instagram</a></p>
         <div class="text-end">
             <p><a href="imprint.html">Impressum</a></p>
             <p><a href="privacy.html">Datenschutz</a></p>
