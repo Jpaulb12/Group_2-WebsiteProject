@@ -4,53 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <link rel="stylesheet" href="../../output.css">
-     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-     body {
+        body {
             margin: 0;
             padding: 0;
             height: 300vh; 
-            background-color:white;
-            
+            background-color: white;
         }
 
-        
         .animation-container {
             position: relative;
-            top: 75%;
+            top: 85%;
             left: 50%;
-            transform: translate(-50%,-55%);
-            width:100%;
-            max-width:1400px; /* To Lock the screen from Zoom Out */
-            height:100vh;
-            max-height:900px; /* Keep dimensions stable */
+            transform: translate(-50%, -55%);
+            width: 100%;
+            max-width: 3024px;
+            height: 100vh;
+            max-height: 900px;
             background-color: #ffffff;
-            overflow: hidden;
-        
+                      
         }
 
-        
         .shape {
             position: absolute;
             transition: transform 0.1s ease-out;
             will-change: transform;
+            max-height: 90% ;
+        
         }
-        #text-layer{
+         
 
-         margin-top: 20%;
-
-        }
-        #shape-yellow{
-        min-width: 2cm;
-        min-height: 5cm;
-            
+        #text-layer {
+            margin-top: 40%;
         }
 
-        /* --- Responsiveness for Mobile / iPhone 14 to match small-size.PNG --- */
-        @media (max-width: 768px) {
-            /* Restyle header elements so they fit mobile displays cleanly */
+        #shape-yellow {
+            min-width: 3cm;
+            min-height: 5cm;
+        }
+
+        /* --- 1. Mobile Styles (Up to 767px) --- */
+        @media (max-width: 767px) {
             header {
                 height: auto !important;
                 padding: 1rem !important;
@@ -63,174 +58,206 @@
                 line-height: 1.25rem !important;
             }
 
-            /* Position the text layer squarely in the center of the viewport over the shapes */
             #text-layer {
-                margin-top: 0 !important;
+                margin-top: 0% !important;
                 font-size: 150% !important;
                 line-height: 2rem !important;
-                max-width: 70% !important;
-                padding: 0 1rem;
-                align-items: center;
+                max-width: 65% !important;
+                padding: 0 2rem;
+                margin-bottom: 50%; /* Reduced to prevent extreme layout push */
             }
 
-            /* Adjust container behavior on mobile devices */
             .animation-container {
                 top: 60% !important;
                 height: 100vh !important;
             }
 
-            /* Overriding absolute position constraints to match the tight cluster in small-size.PNG */
             .animation-container > div {
-                transform: scale(0.9); /* Keeps shapes bounded within small viewports */
+                transform: scale(0.9);
             }
 
-            /* Pink Vector */
-            .animation-container div[style*="right:40%"] {
-                right: 20% !important;
+            #pink {
+                right: 15% !important;
+                left: auto !important;
                 top: 10% !important;
                 width: 40%;
-                height:70% ;
+                height: 70%;
             }
 
-            /* Yellow Shape */
             #shape-yellow {
                 position: absolute !important;
                 top: 10% !important;
                 left: 0px !important;
-                height: 70%;
-                width:70% ;
+                height: 90%;
+                width: 70%;
             }
 
-            /* Teal Shape (corresponds to the upper-left green cluster block) */
             #shape-teal {
-                left: 20% !important;
-                top: 20% !important;
-                width:55%;
-                left:10%;
+                top: 16% !important;
+                width: 55% !important;
+                left: 10% !important;
             }
 
-            /* Blue Shape */
             #shape-blue {
-                left: 42% !important;
-                top: 24% !important;
+                left: 45% !important;
+                top: 18% !important;
                 width: 55% !important;
             }
 
-            /* Red Shape */
             #shape-red {
                 left: 15% !important;
-                top: 38% !important;
+                top: 30% !important;
+                width: 73%;
+                height: 50%;
             }
-           #secgreen{
-        
-           height:0.9%;
-           width:40%;
-           left:80%;
-           }
-            /* Secondary Green Shape */
-            .animation-container div[style*="top:30%"] {
-                top: 25% !important;
-                left: 0% !important;
-                height: 25%;
+
+            #secgreen {
+                margin-top: -55%; /* Fixed extreme clipping */
+                height: auto;
+                width: 40%;
+                left: 62%;
             }
         }
-</style>
-        </head>
-<body  id="wrapper-bg-view">
 
+        /* --- 2. Standard iPad / Tablet Styles (768px to 1024px) --- */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            #text-layer {
+                margin-top: 10% !important;
+                font-size: 2.5rem !important;
+            }
+            .animation-container {
+                top: 65% !important;
+            }
+            #shape-blue {
+                left: 40% !important;
+                top: 15% !important;
+                width: 45% !important;
+            }
+            #pink {
+                left: 35% !important;
+                width: 45% !important;
+            }
+        }
 
+        /* --- 3. iPad Pro / Laptop Styles (1025px to 1668px) --- */
+        @media (min-width: 1025px) and (max-width: 1668px) {
+            #shape-blue {
+                left: 43% !important;
+                top: 21% !important;
+                width: 55% !important;
+                height: 20%;
+            }
+            #pink {
+                margin-left: 29% !important;
+                top: 10% !important;
+                width: 60%;
+                height: 95%;
+            }
+            
+        }
+        @media (min-width: 1024px) and (max-width: 1024px){
+            .animation-container {
+            position: relative;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50%, -55%);
+            width: 100%;
+            max-width: 3024px;
+            height: 100vh;
+            max-height: 900px;
+            background-color: #ffffff;
+            overflow: hidden;
+                      
+        }
+            
+             #pink {
+                margin-left: 20% !important;
+                top: 3% !important;
+                width: 60%;
+                height: 95%;
+            }
+             #shape-teal {
+                top: 16% !important;
+                width: 45% !important;
+                height:40%;
+                left: 10% !important;
+            }
+            #shape-red {
+                left: 15% !important;
+                top: 55% !important;
+                width: 63%;
+                height: 30%;
+            }
+              #secgreen {
+                margin-top: -18%; /* Fixed extreme clipping */
+                height: auto;
+                width: 40%;
+                left: 61%;
+            }
+            #text-layer{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body id="wrapper-bg-view">
 
-<!-- The navigation bar -->
-    <header class=" fixed top-0 left-0 w-full h-32 z-50 flex items-center justify-between py-2 pr-5 pl-5  ">
-        <div class="self-start  mt-4 text-2x">
-            <p>DE</p>
-            <p>EN</p>
-        </div>
-        <div class="">
-            <h1 class="text-3xl font-bold ">
-                Baumeister
+    
+
+    <div class="relative w-full h-screen">
+        <div class="absolute z-[999] h-screen inset-0 flex justify-center items-center font-semibold text-white pointer-events-none">
+            <h1 id="text-layer" class="text-center text-4xl max-w-auto md:w-[30%] leading-10 pointer-events-auto">
+                We help you set focus and gain impact. By adding to the conversation, not to the noise. 
             </h1>
         </div>
-        <nav class=" flex justify-end  flex-col  text-xl  text-right">
-            <a href="#about-us">About</a>
-            <a href="#services">Services</a>
-            <a href="#references">References</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
 
-         <div class="relative w-full h-screen ">
+        <div class="animation-container">
+            <div id="pink" class="shape absolute top-[15%]   left-[15%] w-auto" >
+                <img src="images/Vector.png" alt="pink-images">
+            </div>
 
-    <div   class="absolute z-999  h-screen inset-0 flex justify-center items-center font-semi-bold text-white pointer-events-none">
+            <div id="shape-yellow" class="shape z-8">
+                <img src="images/yellow.png" alt="yellow">
+            </div>
 
-        <h1 id="text-layer" class="text-center text-4xl max-w-auto md:w-[30%]   leading-10 pointer-events-auto">
-           We help you set focus and gain impact. By adding to the conversation, not to the noise. 
-        </h1>
+            <div id="shape-teal" class="shape absolute top-[22%] left-[19%] w-[55%] z-10">
+                <img src="images/stgreen.png" alt="teal-shape">
+            </div>
 
+            <div id="shape-red" class="shape absolute top-[70%] left-[10%] z-8">
+                <img src="images/sfa.png" alt="red-image">
+            </div>
+
+            <div id="shape-blue" class="shape absolute top-[15%] left-[45%] w-[37%] z-10">
+                <img src="images/Blue.png" alt="blue-image-icon">
+            </div>
+
+            <div id="secgreen" class="shape absolute top-[50%] right-0">
+                <img src="images/secgreen.png" alt="secondary-green"> 
+            </div>
+        </div>
     </div>
-<div class="animation-container">
-   <div class="absolute top-[10%] z-1 right-[5%] lg:right-[10%] " style="right:40%;">
-    <img src="images/Vector.png" alt="pink-images">
-   </div>
-
-
-   <div id="shape-yellow" class=" z-8   " >
-    <img src="images/yellow.png" alt="yellow">
-   </div>
-
-
-   <div id="shape-teal" class="absolute top-[22%] left-[15%]      z-9" style="left:19%;">
-    <img src="images/stgreen.png">
-   </div>
-
-
-   <div id="shape-red" class="absolute top-[35%] left-[10%]      z-8" style="top:49%;">
-    <img src="images/sfa.png" alt="red-image">
-   </div>
-
-
-   <div id="shape-blue" class="absolute top-[5%] left-[32%]     z-10" style="left: 45% ;width:37%; top:15%; ">
-    <img src="images/Blue.png" alt="blue-image-icon">
-   </div>
-
-
-   <div id="secgreen" class="absolute bottom-0 -right-26      " style="top:50%; right: 0%;">
-<img src="images/secgreen.png">   
-</div>
-</div>
-</div>
 
     <script>
         const yellow = document.getElementById('shape-yellow');
         const teal = document.getElementById('shape-teal');
         const text = document.getElementById('text-layer');
-        const red=document.getElementById('shape-red');
-        const blue=document.getElementById('shape-blue');
+        const red = document.getElementById('shape-red');
+        const blue = document.getElementById('shape-blue');
 
         window.addEventListener('scroll', () => {
-            // 1. Calculate scroll percentage (0 to 1)
             const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-            const scrollPercent = window.scrollY / maxScroll;
-
-            // 2. Limit the effect so it stops moving halfway through the scroll (like the video)
-            const progress = Math.min(scrollPercent * 2, 1); // Reaches 100% structural stop halfway down
-
-            // 3. Apply the movement mapping
-            // Yellow moves down 250px and right 50px
-            yellow.style.transform = `translate(${progress * 50}px, ${progress * 250}px)`;
+            if (maxScroll <= 0) return;
             
-            // Teal moves down 300px and left 80px
+            const scrollPercent = window.scrollY / maxScroll;
+            const progress = Math.min(scrollPercent * 2, 1);
+
+            yellow.style.transform = `translate(${progress * 50}px, ${progress * 250}px)`;
             teal.style.transform = `translate(${progress * -80}px, ${progress * 412}px)`;
-            red.style.transform=`translate(${progress * -30}px, ${progress * 250}px)`;
-            blue.style.transform=`translate(${progress * -70}px, ${progress *250}px)`;
-
-            // Text fades in and moves slightly up into its final spot
-           // text.style.transform = `translateY(${(1 - progress) * 50}px)`;
-          text.style.transform = `translateY(${(  progress + 1 ) * 50}px)`;
-
-            //text.style.opacity = progress;
+            red.style.transform = `translate(${progress * -30}px, ${progress * 250}px)`;
+            blue.style.transform = `translate(${progress * -70}px, ${progress * 250}px)`;
+           //text.style.transform = `translateY(${(progress + 1) * 50}px)`;
         });
     </script>
-    
 </body>
 </html>
