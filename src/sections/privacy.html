@@ -4,30 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Document</title>
+    <title>Privacy</title>
 </head>
-<body>
-    <div class="text-[#00672e]">
-    <!-- The navigation bar -->
-    <header class=" fixed top-0 left-0 w-full h-32 z-50 flex items-center justify-between py-2 ">
-        <div class="self-start  mt-4 text-2x">
+<body class="text-[#00672e] bg-[#f3f1ef]">   
+    
+
+    <div class="absolute top-5 left-5 text-2xl z-50 lg:fixed">
             <p>DE</p>
             <p>EN</p>
         </div>
-        <div class="">
-            <h1 class="text-3xl font-bold ">
-                Baumeister
-            </h1>
-        </div>
-        <nav class=" flex justify-end  flex-col  text-xl  text-right">
-            <a href="#about-us">About</a>
+      <!-- The navigation bar -->
+    <header class=" fixed -top-5
+     left-0 w-full h-32 z-60 flex items-center justify-center py-2  ">
+
+        <div class="relative w-70 h-35 z-8">
+    <div class="absolute inset-0 md:hidden bg-[#f3f1ef]  [clip-path:polygon(83%_29%,96%_36%,100%_49%,91%_66%,15%_72%,0%_58%,3%_39%)]"></div>
+
+    <h1 class="relative z-10 flex h-full items-center justify-center text-5xl font-semibold">
+        Baumeister
+    </h1>
+</div>
+        <nav class="absolute right-5">
+
+ <div class=" lg:hidden w-14 z-9 h-15 flex items-center justify-center bg-[#00672e] [clip-path:polygon(16%_28%,75%_21%,100%_51%,79%_78%,26%_72%,13%_50%)] " onclick="window.location.href='src/sections/vision.html'">
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-white">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                     </svg>
+             </div>
+<div class="hidden lg:flex flex-col  text-2xl  text-right mt-20">
+            <a href="#about-us" >About</a>
             <a href="#services">Services</a>
-            <a href="#refernces">References</a>
+            <a href="#references">References</a>
             <a href="#contact">Contact</a>
+</div>
         </nav>
-        
     </header>
-    <div id="about" class="m-auto mt-60 text-2xl flex flex-col gap-10 max-w-[85%] text-[#00672e] font-normal">
+
+
+    <div class="m-auto mt-60 text-2xl flex flex-col gap-10 max-w-[85%] font-normal">
             <h3 class="text-4xl font-semibold">DATA PRIVACY</h3>
             <p class="text-4xl">PRIVACY POLICY</p>
 
@@ -439,5 +453,89 @@
             </div>
         </div>
     </div>
+
+<footer class="w-[90%] lg:w-[95%] mx-auto mt-20 pb-10 lg:pt-20 text-[15px] font-bold">
+
+    <!-- iPhone 14 & 15 Pro -->
+    
+   <div class="flex flex-col gap-10 lg:hidden md:hidden ">
+        
+        <div>
+            <p>Agentur Baumeister</p>
+            <p>Böckhstraße 13</p>
+            <p>10967 Berlin</p>
+        </div>
+       
+        <div>
+            <p class="underline">hallo@agentur-baumeister.com</p>
+            <p>+49 (0)30 - 490 827 87</p>
+        </div>
+        
+        <div class="flex justify-between flex-wrap gap-y-4 mt-5">
+           <p><a href="privacy.html">Datenschutz</a></p>
+            <p><a href="imprint.html">Impressum</a></p>            
+            <p> <a href="#">LinkedIn</a></p>
+            <p> <a href="https://www.motelminibar.com/">Instagram</a></p>
+        </div>
+
+    </div>
+
+    <!-- iPad Pro 11" -->
+
+    
+     <div class="hidden lg:hidden md:flex justify-center">
+        <img src="vector/sfa.png" alt="hexagone-vector" class="my-30 size-[70%]">
+     </div>
+
+    <div class="hidden lg:hidden md:grid md:grid-cols-2 gap-10">
+
+        <div>
+            <p>Agentur Baumeister</p>
+            <p>Böckhstraße 13</p>
+            <p>10967 Berlin</p>
+        </div>
+
+        <div class="text-right">
+            <p class="underline">hallo@agentur-baumeister.com</p>
+            <p>+49 (0)30 - 490 827 87</p>
+        </div>
+
+        <div class="col-span-2 flex justify-between mt-4">            
+             <p> <a href="#">LinkedIn</a></p>
+            <p> <a href="https://www.motelminibar.com/">Instagram</a></p>
+            <p><a href="imprint.html">Impressum</a></p>
+            <p><a href="privacy.html">Datenschutz</a></p>
+           
+        </div>
+
+    </div>
+
+    <!-- MacBook Pro 14" -->
+     <div class="hidden lg:flex justify-center">
+        <img src="vector/sfa.png" alt="hexagone-vector" class="my-30">
+     </div>
+    <div class="hidden lg:flex lg:justify-between text-[20px]">
+
+        <div>
+            <p>Agentur Baumeister</p>
+            <p>Böckhstraße 13</p>
+            <p>10967 Berlin</p>
+        </div>
+
+        <div>
+            <p class="underline"><a href="https://mail.google.com/mail/u/0/#inbox?compose=new">hallo@agentur-baumeister.com</a></p>
+            <p>+49 (0)30 - 490 827 87</p>
+        </div>
+
+        <p><a href="#">LinkedIn</a></p>
+        <p><a href="https://www.motelminibar.com/">Instagram</a></p>
+        <div class="text-end">
+            <p><a href="imprint.html">Impressum</a></p>
+            <p><a href="privacy.html">Datenschutz</a></p>
+        </div>        
+
+    </div>
+
+</footer>  
 </body>
 </html>
