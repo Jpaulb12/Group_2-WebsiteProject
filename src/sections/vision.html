@@ -156,6 +156,20 @@
             
         }
         @media (min-width: 1024px) and (max-width: 1024px){
+            .animation-container {
+            position: relative;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50%, -55%);
+            width: 100%;
+            max-width: 3024px;
+            height: 100vh;
+            max-height: 900px;
+            background-color: #ffffff;
+            overflow: hidden;
+                      
+        }
+            
              #pink {
                 margin-left: 20% !important;
                 top: 3% !important;
@@ -242,7 +256,7 @@
             teal.style.transform = `translate(${progress * -80}px, ${progress * 412}px)`;
             red.style.transform = `translate(${progress * -30}px, ${progress * 250}px)`;
             blue.style.transform = `translate(${progress * -70}px, ${progress * 250}px)`;
-            text.style.transform = `translateY(${(progress + 1) * 50}px)`;
+           //text.style.transform = `translateY(${(progress + 1) * 50}px)`;
         });
     </script>
 </body>
