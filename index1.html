@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>about_us</title>
-    <link rel="stylesheet" href="../../output.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Baumeister</title>
+    <link rel="stylesheet" href="output.css">
      <style>
         body {
             margin: 0;
@@ -211,7 +210,7 @@
             <p>DE</p>
             <p>EN</p>
         </div>
-        <div class="relative w-40 h-25">
+        <div class="relative w-60 h-35">
     <div class="absolute inset-0 md:hidden bg-white [clip-path:polygon(83%_29%,96%_36%,100%_49%,91%_66%,15%_72%,0%_58%,3%_39%)]"></div>
 
     <h1 class="relative z-10 flex h-full items-center justify-center text-5xl font-semibold">
@@ -233,7 +232,7 @@
 </div>
         </nav>
     </header>
-    <div class="relative w-full h-screen">
+   <div class="relative w-full h-screen">
         <!-- Kept the main intro text above the sliding layers -->
         <div class="absolute z-[999] h-screen inset-0 flex justify-center items-center font-semibold text-white pointer-events-none">
             <h1 id="text-layer" class="text-center text-4xl max-w-auto md:w-[30%] leading-10 pointer-events-auto">
@@ -243,75 +242,40 @@
 
         <div class="animation-container">
             <div id="pink" class="shape absolute top-[15%] left-[15%]">
-                <img src="images/Vector.png" alt="pink-images">
+                <img src="Vector.png" alt="pink-images">
             </div>
 
             <div id="shape-yellow" class="shape z-8">
-                <img src="images/yellow.png" alt="yellow">
+                <img src="yellow.png" alt="yellow">
             </div>
 
             <div id="shape-teal" class="shape absolute top-[22%] left-[19%] w-[55%] z-10">
-                <img src="images/stgreen.png" alt="teal-shape">
+                <img src="stgreen.png" alt="teal-shape">
             </div>
 
             <div id="shape-red" class="shape absolute top-[70%] left-[10%] z-8">
-                <img src="images/sfa.png" alt="red-image">
+                <img src="sfa.png" alt="red-image">
             </div>
 
             <div id="shape-blue" class="shape absolute top-[15%] left-[45%] w-[37%] z-10">
-                <img src="images/Blue.png" alt="blue-image-icon">
+                <img src="Blue.png" alt="blue-image-icon">
             </div>
 
             <div id="secgreen" class="shape absolute top-[50%] right-0">
-                <img src="images/secgreen.png" alt="secondary-green"> 
+                <img src="secgreen.png" alt="secondary-green"> 
             </div>
         </div>
     </div>
 
      
 
-   <script>
-        const pink = document.getElementById('pink');
-        const yellow = document.getElementById('shape-yellow');
-        const teal = document.getElementById('shape-teal');
-        const red = document.getElementById('shape-red');
-        const blue = document.getElementById('shape-blue');
-
-        window.addEventListener('scroll', () => {
-            const maxScroll = window.innerHeight * 1.5;
-            const scrollPercent = Math.min(window.scrollY / maxScroll, 1);
-            const baseProgress = Math.min(scrollPercent * 2, 1);
-
-            let horizontalScale = 1;
-            if (scrollPercent > 0.5) {
-                const scaleProgress = (scrollPercent - 0.5) / 0.5;
-                horizontalScale = 1 + (scaleProgress * 0.55); 
-            }
-
-            const isTablet = window.innerWidth >= 768 && window.innerWidth <= 1024;
-            const isMobile = window.innerWidth < 768;
-
-            let scalar = 1.0;
-            if (isTablet) {
-                scalar = 0.45;
-            } else if (isMobile) {
-                scalar = 0.3;
-            }
-
-            pink.style.transform = `translate(${baseProgress * 40 * scalar}px, ${baseProgress * 180 * scalar}px)`;
-            yellow.style.transform = `translate(${baseProgress * 50 * scalar}px, ${baseProgress * 250 * scalar}px)`;
-            teal.style.transform = `translate(${baseProgress * -80 * scalar}px, ${baseProgress * 412 * scalar}px) scaleX(${horizontalScale})`;
-            red.style.transform = `translate(${baseProgress * -30 * scalar}px, ${baseProgress * 250 * scalar}px) scaleX(${horizontalScale})`;
-            blue.style.transform = `translate(${baseProgress * -70 * scalar}px, ${baseProgress * 250 * scalar}px) scaleX(${horizontalScale})`;
-        });
-    </script>
   
 <div id="about-us">
         <p class="font-normal text-[48px] w-[80%] mt-40 mx-auto">We are a Berlin-based communications agency specialising in helping companies and brands find their voice and position themselves. Whether it's brand building,identity sharpening,or communication strategy, we bring a fresh perspective to established structures, develop tailor-made communication solutions, and ensure that message resonate. with over decade of experience, we have honed our skills in giving brands their unmistakable identity and making them visible in the long term.</p>
         </div>
 <div class="relative">
         <div class="sticky top-0 z-50 mt-30">
-        <div class="ml-28 md:ml-70 lg:ml-117 w-59 h-35 bg-yellow-300 [clip-path:polygon(16%_28%,75%_21%,100%_51%,79%_78%,26%_72%,13%_50%)] "></div>
+        <div class="ml-28 md:ml-70 lg:ml-120 w-59 h-35 bg-yellow-300 [clip-path:polygon(16%_28%,75%_21%,100%_51%,79%_78%,26%_72%,13%_50%)] "></div>
         </div>
 
 <div id="services">
@@ -367,10 +331,10 @@
 
             </ul>
 </div>
-</div>
 
 
-</div>
+
+
 <footer id="contact" class="w-[90%] lg:w-[95%] mx-auto mt-20 pb-10 lg:pt-20 text-[15px] font-bold">
 
     <!-- iPhone 14 & 15 Pro -->
@@ -390,7 +354,7 @@
         
         <div class="flex justify-between flex-wrap gap-y-4 mt-5">
            <p><a href="privacy.html">Datenschutz</a></p>
-            <p><a href="imprint.html">Impressum</a></p>            
+            <p><a href="src/sections/imprint.html">Impressum</a></p>            
             <p> <a href="#">LinkedIn</a></p>
             <p> <a href="https://www.motelminibar.com/">Instagram</a></p>
         </div>
@@ -401,7 +365,7 @@
 
     
      <div class="hidden lg:hidden md:flex justify-center">
-        <img src="vector/sfa.png" alt="hexagone-vector" class="my-30 size-[70%]">
+        <img src="src/sections/images/sfa.png" alt="hexagone-vector" class="size-[70%] z-5">
      </div>
 
     <div class="hidden lg:hidden md:grid md:grid-cols-2 gap-10">
@@ -420,7 +384,7 @@
         <div class="col-span-2 flex justify-between mt-4">            
              <p> <a href="#">LinkedIn</a></p>
             <p> <a href="https://www.motelminibar.com/">Instagram</a></p>
-            <p><a href="imprint.html">Impressum</a></p>
+            <p><a href="index.html">Impressum</a></p>
             <p><a href="privacy.html">Datenschutz</a></p>
            
         </div>
@@ -429,7 +393,7 @@
 
     <!-- MacBook Pro 14" -->
      <div class="hidden lg:flex justify-center">
-        <img src="vector/sfa.png" alt="hexagone-vector" class="my-30">
+        <img src="src/sections/images/sfa.png" alt="hexagone-vector" class="mt-30 mb-50 z-20">
      </div>
     <div class="hidden lg:flex lg:justify-between text-[20px]">
 
@@ -447,7 +411,7 @@
         <p><a href="#">LinkedIn</a></p>
         <p><a href="https://www.motelminibar.com/">Instagram</a></p>
         <div class="text-end">
-            <p><a href="imprint.html">Impressum</a></p>
+            <p><a href="src/sections/imprint.html">Impressum</a></p>
             <p><a href="privacy.html">Datenschutz</a></p>
         </div>        
 
@@ -455,8 +419,42 @@
 
 
 </footer> 
+</div>
+  <script>
+        const pink = document.getElementById('pink');
+        const yellow = document.getElementById('shape-yellow');
+        const teal = document.getElementById('shape-teal');
+        const red = document.getElementById('shape-red');
+        const blue = document.getElementById('shape-blue');
 
- 
+        window.addEventListener('scroll', () => {
+            const maxScroll = window.innerHeight * 1.5;
+            const scrollPercent = Math.min(window.scrollY / maxScroll, 1);
+            const baseProgress = Math.min(scrollPercent * 2, 1);
+
+            let horizontalScale = 1;
+            if (scrollPercent > 0.5) {
+                const scaleProgress = (scrollPercent - 0.5) / 0.5;
+                horizontalScale = 1 + (scaleProgress * 0.55); 
+            }
+
+            const isTablet = window.innerWidth >= 768 && window.innerWidth <= 1024;
+            const isMobile = window.innerWidth < 768;
+
+            let scalar = 1.0;
+            if (isTablet) {
+                scalar = 0.45;
+            } else if (isMobile) {
+                scalar = 0.3;
+            }
+
+            pink.style.transform = `translate(${baseProgress * 40 * scalar}px, ${baseProgress * 180 * scalar}px)`;
+            yellow.style.transform = `translate(${baseProgress * 50 * scalar}px, ${baseProgress * 250 * scalar}px)`;
+            teal.style.transform = `translate(${baseProgress * -80 * scalar}px, ${baseProgress * 412 * scalar}px) scaleX(${horizontalScale})`;
+            red.style.transform = `translate(${baseProgress * -30 * scalar}px, ${baseProgress * 250 * scalar}px) scaleX(${horizontalScale})`;
+            blue.style.transform = `translate(${baseProgress * -70 * scalar}px, ${baseProgress * 250 * scalar}px) scaleX(${horizontalScale})`;
+        });
+    </script>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
