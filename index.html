@@ -6,7 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>website_project</title>
      <link rel="stylesheet" href="output.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        body{
+            font-family: 'Poppins', sans-serif;
+        }
+               #logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.5px; 
+}
         #wrapper-bg-view {
             margin: 0;
             padding: 0;
@@ -48,13 +59,19 @@
 
         /* 1. Mobile / iPhone Styles (Up to 767px) */
         @media (max-width: 767px) {
+              #wrapper-bg-view {
+            margin: 0;
+            padding: 0;
+            height: 85vh; 
+            background-color: white;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
             header {
                 height: auto !important;
                 padding: 1rem !important;
             }
-            header h1 {
-                font-size: 1.5rem !important;
-            }
+          
             header nav {
                 font-size: 0.875rem !important;
                 line-height: 1.25rem !important;
@@ -72,7 +89,7 @@
             }
 
             .animation-container {
-                top: 55% !important;
+                top: 65% !important;
                 height: 80vh !important;
             }
 
@@ -130,6 +147,14 @@
 
         /*  2. iPad / Tablet Specific Layout (768px to 1024px)  */
         @media (min-width: 768px) and (max-width: 1024px) {
+              #wrapper-bg-view {
+            margin: 0;
+            padding: 0;
+            height: 100vh; 
+            background-color: white;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
             .animation-container{
     width:100vw !important;
     left:50%;
@@ -185,9 +210,14 @@
             #text-layer {
                 display: none !important;
             }
+             #service-shape {
+        align-self: flex-end !important;
+    }
         }
         /* 3. Large Laptop Styles (1025px to 1668px)  */
         @media (min-width: 1025px) and (max-width: 1668px) {
+           
+        
             .animation-container{
                 top: 77% !important;
             }
@@ -206,26 +236,26 @@
         }
     </style>
   </head>
-  <body >
+  <body class="overflow-x-hidden" >
       <header class=" fixed top-0
-     left-0 w-full h-32 z-60 flex items-center justify-between py-2 pr-4 pl-4 mx-auto ">
-        <div class="self-start  mt-4 text-2xl">
+     left-0 w-full h-35 z-60 flex items-center justify-between py-2 pr-4 pl-4 mx-auto ">
+        <div class=" text-2xl">
             <p>DE</p>
             <p>EN</p>
         </div>
-        <div class="relative w-46 h-28">
+        <div class="relative w-68 h-35 ">
     <div class="absolute inset-0 md:hidden bg-white [clip-path:polygon(83%_29%,96%_36%,100%_49%,91%_66%,15%_72%,0%_58%,3%_39%)]"></div>
 
-    <h1 class="relative z-10 flex lg:hidden items-center justify-center h-full text-5xl font-semibold ">
+    <h1 class="relative z-10 flex lg:hidden items-center justify-center h-full text-[40px] md:text-5xl font-semibold " id="logo">
         Baumeister
     </h1>
-    <h1 class="hidden lg:flex items-center h-full text-5xl font-semibold">
+    <h1 class="hidden lg:flex items-center h-full text-5xl font-semibold ml-12" id="logo-desktop">
  Baumeister
     </h1>
 </div>
         <nav class=" flex justify-end">
 
- <div class=" lg:hidden w-12 h-16 flex items-center justify-center bg-black [clip-path:polygon(16%_28%,75%_21%,100%_51%,79%_78%,26%_72%,13%_50%)] " onclick="window.location.href='menu.html'">
+ <div class=" lg:hidden w-12 h-15 flex items-center justify-center bg-black [clip-path:polygon(16%_28%,75%_21%,100%_51%,79%_78%,26%_72%,13%_50%)] " onclick="window.location.href='menu.html'">
                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-white">
   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                      </svg>
@@ -275,19 +305,19 @@
     </div>
 </div>
 <div id="about-us">
-        <p class="font-normal text-[48px] w-[80%] mt-15  mx-auto">We are a Berlin-based communications agency specialising in helping companies and brands find their voice and position themselves. Whether it's brand building,identity sharpening,or communication strategy, we bring a fresh perspective to established structures, develop tailor-made communication solutions, and ensure that message resonate. with over decade of experience, we have honed our skills in giving brands their unmistakable identity and making them visible in the long term.</p>
+        <p class="font-medium text-3xl mt-30  md:text-[32px] w-[80%] md:mx-auto lg:text-4xl">We are a Berlin-based communications agency specialising in helping companies and brands find their voice and position themselves. Whether it's brand building,identity sharpening,or communication strategy, we bring a fresh perspective to established structures, develop tailor-made communication solutions, and ensure that message resonate. with over decade of experience, we have honed our skills in giving brands their unmistakable identity and making them visible in the long term.</p>
         </div>
-<div class="relative">
-        <div class="sticky top-0 z-50 mt-30 flex justify-center">
+<div class="relative" id="sticky-wrapper">
+        <div class="sticky top-0 z-50 mt-30 flex  justify-center">
             <img src="Vector_6.png" alt="shape" class="w-54 h-28
 
-md:w-70 md:h-30
-lg:w-52 lg:h-32">
+md:w-50 md:h-30
+lg:w-60 lg:h-32">
         </div>
 
         <div id="services">
- <div class="flex flex-col  lg:flex-row justify-center gap-12 w-[80%] mx-auto mt-30 mb-30 ">
-  <div class="font-medium text-[48px] flex flex-col  gap-8">
+ <div class="flex flex-col items-center  lg:flex-row justify-center gap-12 w-[80%] mx-auto mt-30 mb-30 ">
+  <div class=" font-semibold text-3xl md:text-[32px] md:gap-12  flex flex-col  gap-8" id="list">
   <p>Brand strategy</p>
   <p>Corporate Identity & Website development</p>
   <p>SEO & copywriting</p>
@@ -295,14 +325,15 @@ lg:w-52 lg:h-32">
   <p>Digital marketing &content production</p>
   <p>Influencer relations</p>
 </div>
- <div class="w-100 h-130 md:w-110 md:h-130  lg:h-140 lg:w-150 bg-green-800 [clip-path:polygon(32%_5%,63%_0%,96%_19%,96%_71%,70%_100%,24%_95%,16%_67%,7%_31%)] mt-20">
-  <p class="p-13 ml-10   md:p-15  md:ml-20 mr-10 lg:p-14 lg:ml-10 text-sm font-medium text-white mt-17">Our strategic approach is a collaborative journey that starts with analysing the initial situation and leads to a message that cut through the information overload we take care of content production and mantain relationships with multipliers to position your brand in best possible way. From analysis to implementation, we accompany you every steps of the way, ensuring that every measure is effective.</p>
+ <div class="w-100 h-130 md:w-110 md:h-130   lg:h-140 lg:w-150 bg-green-800 [clip-path:polygon(32%_5%,63%_0%,96%_19%,96%_71%,70%_100%,24%_95%,16%_67%,7%_31%)] mt-20" id="service-shape">
+  <p class="p-13 ml-10   md:p-15  md:ml-20 mr-10 lg:p-14 lg:ml-16 text-sm  font-medium text-white mt-17">Our strategic approach is a collaborative journey that starts with analysing the initial situation and leads to a message that cut through the information overload we take care of content production and mantain relationships with multipliers to position your brand in best possible way. From analysis to implementation, we accompany you every steps of the way, ensuring that every measure is effective.</p>
  </div>
 
 </div>
 </div>
+</div>
 
-  <div id="references" class=" bg-yellow-300 mx-auto  p-35 
+  <div id="references" class=" bg-yellow-300 mx-auto p-14 md:p-35 
             [clip-path:polygon(0%_0%,100%_0%,100%_97%,29%_100%,0%_99%)]">
             <ul class="text-right mb-30 font-normal text-2xl">
            <li><a href="https://acehotel.com/">Ace Hotel</a></li>
@@ -338,27 +369,27 @@ lg:w-52 lg:h-32">
 
             </ul>
 </div>
-</div>
+
 
 
 <div id="contact">
  <div class="w-80 h-80 md:w-120 md:h-120 mx-auto bg-red-600 [clip-path:polygon(15%_28%,75%_21%,100%_51%,79%_78%,26%_72%,13%_50%)] z-20 "></div>
-    <footer class="flex  text-black flex-col lg:hidden gap-20 justify-center font-medium text-lg  mt-5">
-    <div class="flex flex-col gap-6 ml-5 md:flex-row md:gap-62 md:ml-15 ">
+    <footer class="flex  text-black flex-col lg:hidden gap-20 justify-center font-semibold text-[16px]  mt-5">
+    <div class="flex flex-col gap-8 ml-5 md:flex-row md:gap-62 md:ml-15 md:text-lg">
   <p>Agentur Baumeister<br>
   BockhstraBe 13
 <br>10967 Berlin</p>
 <P><a href="https://www.figma.com/proto/vT0RgmKtHmisEhSzxW3PW9/Baumeister----Exercise?node-id=3001-3&p=f&t=0ik18q0jjPR8gndj-0&scaling=min-zoom&content-scaling=fixed&page-id=3001%3A2c" class="underline">hallo@agentur-baumeister.com</a><br>+49(0)30 - 490 827 87</P>
   </div>
-<div class="flex gap-5 ml-5 md:gap-28 md:ml-15">
-<a href="privacy.html">datenschutz</a>
+<div class="flex gap-4 ml-4 md:gap-28 md:ml-15 md:text-lg">
+<a href="privacy.html">Datenschutz</a>
 <a href="imprint.html">Impressum</a>
 <p>LinkedIn</p>
 <p>Instagram</p>
 
   </div>
 </footer>
-<footer class="hidden lg:flex  gap-24 text-black font-medium text-2xl ml-5 mr-5">
+<footer class="hidden lg:flex  gap-24 text-black font-semibold text-2xl ml-5 mr-5">
 
     <div class="flex flex-col gap-2">
         <p>Agentur Baumeister</p>
@@ -419,6 +450,29 @@ lg:w-52 lg:h-32">
             blue.style.transform = `translate(${baseProgress * -70 * scalar}px, ${baseProgress * 250 * scalar}px) scaleX(${horizontalScale})`;
         });
     </script>
+
+    <script>
+    function adjustStickyRange() {
+        const wrapper = document.getElementById('sticky-wrapper');
+        const references = document.getElementById('references');
+        const isTablet = window.innerWidth >= 768 && window.innerWidth <= 1024;
+
+        if (isTablet) {
+            
+            if (references.parentElement === wrapper) {
+                wrapper.after(references);
+            }
+        } else {
+          
+            if (references.parentElement !== wrapper) {
+                wrapper.appendChild(references);
+            }
+        }
+    }
+
+    adjustStickyRange();
+    window.addEventListener('resize', adjustStickyRange);
+</script>
 
     <script type="module" src="src/main.js"></script>
   </body>
